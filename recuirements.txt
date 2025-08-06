@@ -1,0 +1,3 @@
+python with 3.10 version
+open-cv
+numpy
