@@ -1,27 +1,27 @@
-# 🅿️ Parking Slot Detection using OpenCV
+ Parking Space Detection using OpenCV
 
-A Python project to detect and mark parking slots in a video using OpenCV.
+A simple Parking Management System using Python and OpenCV that detects whether parking spaces are **occupied or empty** using image processing (no ML used).
 
-## 📁 Files
+---
 
--  get_first_frame_&_save_polygon_positions.py for saving positions
-- `main.py` – Runs detection on video
-- `ParkingSlotPoints.pkl` – Saved slot positions
-- `first_frame.jpg` – Base image for marking
-- `requirements.txt` – Python dependencies
-- `README.md` – Project info
+## 📌 Features
 
-## 🚀 How to Use
+- Detects free & occupied parking spots in a video
+- Manual slot selection using mouse clicks
+- Real-time detection with color-coded boxes (green = free, red = occupied)
+- Saves output video with overlays
 
-1. Clone repo & install libraries:
-   ```bash
-   git clone https://github.com/your-username/parking-slot-detection.git
-   cd parking-slot-detection
-   pip install -r requirements.txt
+---
 
+## 🧠 How It Works
 
+1. **Manual Setup (`get_first_frame& save_polygon_positions.py`)**:
+   - Loads a sample image from video.
+   - Click to mark top-left corners of slots.
+   - Press `s` to save positions.
 
-
-
-Author: Mudassar Khalil
-GitHub: https://github.com/mudassarplay
+2. **Detection (`Main_results_check.py`)**:
+   - Loads saved slot positions.
+   - Processes each frame using grayscale, blur, threshold.
+   - Detects white pixel count to determine occupancy.
+   - Draws rectangles and shows count of free slots.
